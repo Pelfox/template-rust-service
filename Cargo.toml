@@ -1,0 +1,18 @@
+[package]
+name = "id-service-backend"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["entity", "migration"]
+
+[dependencies]
+entity = { path = "entity" }
+migration = { path = "migration" }
+
+actix-web = "4.8.0"
+anyhow = "1.0.86"
+dotenvy = "0.15.7"
+env_logger = "0.11.3"
+log = "0.4.22"
+sea-orm = { version = "0.12.15", features = ["sqlx-postgres", "runtime-tokio-native-tls", "macros"] }
